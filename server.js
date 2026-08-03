@@ -5,6 +5,7 @@ const app = express();
 const PORT = 3000;
 
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/images', express.static(path.join(__dirname, 'images')));
 
 app.listen(PORT, () => {
   console.log(`Resume server running at http://localhost:${PORT}`);
